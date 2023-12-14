@@ -1,27 +1,22 @@
 pipeline {
 	agent any
-	tools {
+	
 		
 		// Define the maven tool
-	}
+	
 	stages {
-		stage('Maven Build') {
+		stage(' Build the source code using maven') {
 			steps {
-				// code for build
+				sh 'mvn clean package'
 			}
 		}
 		
-		stage('Docker Build image') {
+		stage('stage2') {
 			steps {
-				// code for building the docker image
+				echo 'Hello world'
 			}
 		}
 		
-		stage('Push to docker hub') {
-			steps {
-				// code for login to docker hub and push the docker image
-			}
-		}
 		
 		
 	}
