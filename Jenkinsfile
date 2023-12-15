@@ -16,6 +16,14 @@ pipeline {
 				sh 'docker build  -t ankitha2001/java-app:1.4 .'
 			}
 		}
+		stage('push docker image to docker hub'){
+			steps {
+				withCredentials([usernamePassword(credentialsId: 'hub-credentials', passwordVariable: 'hubUser', usernameVariable: 'hubUser')]) {
+    			sh "docker login -u ${hubUser} -p ${hubPwd}"
+			sh "docker push ankitha2001/java-app:1.4"		
+					
+}
+		    
 		
 		
 		
