@@ -23,9 +23,10 @@ pipeline {
 			sh "docker push ankitha2001/java-app:1.4"		
 					
 }
+			}
 		    
 		
-			}	
+				
 		
 	}
 
