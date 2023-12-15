@@ -10,10 +10,10 @@ pipeline {
 				sh 'mvn clean package'
 			}
 		}
-		
-		stage('stage2') {
+		#Bulding docker image
+		stage('Docker build') {
 			steps {
-				echo 'Hello world'
+				sh 'docker build  --t ankitha2001/java-app:1.4 .'
 			}
 		}
 		
