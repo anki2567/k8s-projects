@@ -13,7 +13,7 @@ pipeline {
 		
 		stage('Docker build') {
 			steps {
-				sh 'docker build  --t ankitha2001/java-app:1.4 .'
+				sh 'docker build  -t ankitha2001/java-app:1.4 .'
 			}
 		}
 		
